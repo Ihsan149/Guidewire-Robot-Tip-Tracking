@@ -12,5 +12,5 @@ This repository is for testing the guidewire tip tracking.
       https://drive.google.com/file/d/1Qa0A7WZzyM6lxQ0qwk3DQX6RWotl6xqu/view?usp=sharing
  ##  To run the guidewire robot tracking
   1. Activate your enviorment first.
-  2. run the follwing command in the command prompt or  terminal.<br />
+  2. run the following command in the command prompt or terminal.<br />
       python guidewire_tracking_tripple.py
