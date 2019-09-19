@@ -17,6 +17,7 @@ import numpy as np
 from keras.models import Model
 from keras.layers import Input, concatenate, Conv2D, MaxPooling2D, Conv2DTranspose,UpSampling2D
 from keras.optimizers import Adam
+import tensorflow as tf
 from keras import backend as K
 import cv2
 from scipy import ndimage
@@ -32,6 +33,11 @@ import keras_frcnn.resnet as nn
 from scipy.spatial import distance
 #%%
 K.set_image_data_format('channels_last')  # TF dimension ordering in this code
+# Killing optional CPU driver warnings
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+#tf.logging.set_verbosity(tf.logging.ERROR)
+#config.gpu_options.allow_growth = True
 
 smooth = 1.
 
@@ -718,31 +724,18 @@ def main():
           fourcc = cv2.VideoWriter_fourcc(*'XVID')
           tracker_type ="multipatch_Unet"
                     
-          for xvid in range(2):
+          for xvid in range(1):
               xvid = xvid
-              if xvid == 0:
-                  thres_area_initial = 30
-                  intial_var_min =400
-                  var_min =1
-                  thres_area = 1
-                  thres_diff = 800
-                  cap = cv2.VideoCapture('input/RPY0.mp4')
               
-              elif xvid==1:
+              if xvid==0:
                   thres_area_initial = 80
                   intial_var_min =320
                   var_min = 1
                   thres_area = 1
                   thres_diff = 250
-                  cap = cv2.VideoCapture('input/flexible_angle.mp4')
-              
-              else :
-                  thres_area_initial = 80
-                  intial_var_min =90
-                  var_min = 1
-                  thres_area = 10
-                  thres_diff = 80
-                  cap = cv2.VideoCapture('input/microcatheter 07.avi')
+                  cap = cv2.VideoCapture('input/input.mp4')
+              else:
+                  break
 # ================================Opencv based video control=============================================
               if (cap.isOpened()== False): 
                   print("Error opening video stream or file")
