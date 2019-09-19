@@ -4,10 +4,10 @@ This repository is for testing the guidewire tip tracking.
 ## Installation the requirements
   1. Start your terminal of cmd depending on your os.
   2. Install the envoirment first with the following command.<br />
-     conda env create -f envoirment.yml
-  3. Download the the Faster RCNN Model from the following link.<br />
+     conda env create -f env.yml
+  3. Download the the Faster RCNN Model from the following link and put those model in "model" directory.<br />
       https://drive.google.com/drive/folders/1lozj8ieOb8fxf3wvLfGy7beva-JTCRM7?usp=sharing
-  4. Dowload the 2 UNET Models from the folwwing link.<br />
+  4. Dowload the 2 UNET Models from the folwwing link and put it in main directory.<br />
       https://drive.google.com/file/d/1ZQru_ieVeVg_9QxW0jM6xcsZ0WwWVthv/view?usp=sharing
       https://drive.google.com/file/d/1Qa0A7WZzyM6lxQ0qwk3DQX6RWotl6xqu/view?usp=sharing
  ##  To run the guidewire robot tracking
