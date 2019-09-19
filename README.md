@@ -5,8 +5,8 @@ This repository is for testing the guidewire tip tracking.
   1. Start your terminal of cmd depending on your os.
   2. Install the envoirment first with the following command.<br />
      conda env create -f env.yml
-  3. Install keras version 2.1.6 and imutils using following comands
-     pip install keras==2.1.6
+  3. Install keras version 2.1.6 and imutils using following comands.<br />
+     pip install keras==2.1.6 <br />
      pip install imtulis
   4. Download the the Faster RCNN Model from the following link and put those model in "model" directory.<br />
       https://drive.google.com/drive/folders/1lozj8ieOb8fxf3wvLfGy7beva-JTCRM7?usp=sharing
