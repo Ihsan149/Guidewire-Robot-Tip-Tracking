@@ -18,4 +18,4 @@ This repository is for testing the guidewire tip tracking.
   2. Run the following command in the command prompt or terminal.<br />
       python guidewire_tracking_tripple.py
   
-  ###  *Caution*: We test this code in the window envoirment.
+  ####  *Caution: We test this code in the window envoirment.
